@@ -1,33 +1,103 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Eunchan Jo의 개인 홈페이지입니다. 곧 새로운 소식을 전합니다.">
-    <meta name="theme-color" content="#f7f7f2">
+    <meta name="description" content="Eunchan Jo's personal website.">
+    <meta name="theme-color" content="#ffffff">
     <title>Eunchan Jo</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/main.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-    <div class="page">
-      <header class="site-header">
-        <a class="wordmark" href="./" aria-label="Eunchan Jo 홈">EJ<span aria-hidden="true">.</span></a>
-        <span class="site-label" lang="en">Personal website</span>
-      </header>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="header-inner" aria-label="Main navigation">
+        <a class="wordmark" href="./">Eunchan Jo</a>
+        <div class="header-links">
+          <a href="#about" aria-current="page">About</a>
+          <button type="button" disabled title="CV will be available later">Curriculum Vitae <span>(CV)</span></button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Profile and contents">
+        <div class="profile">
+          <div class="profile-photo" role="img" aria-label="Profile photo placeholder">
+            <svg viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="59" r="22"/><path d="M35 139v-12a45 45 0 0 1 90 0v12"/></svg>
+          </div>
+          <div class="profile-info">
+            <h1>Eunchan Jo</h1>
+            <div class="affiliation"></div>
+          </div>
+        </div>
+
+        <ul class="social-links" aria-label="Contact and profiles">
+          <li><span class="unavailable" aria-disabled="true" title="Email will be added later">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6 8 6 8-6"/></svg>
+            Email
+          </span></li>
+          <li><span class="unavailable" aria-disabled="true" title="Google Scholar profile will be added later">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Zm4 2v6c4 3 8 3 12 0v-6M22 9v8"/></svg>
+            Google Scholar
+          </span></li>
+          <li><a href="https://github.com/Chipmunk-g4">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21v-3c-4 1-4-2-6-3m14 6v-4c0-1-.4-1.7-1-2 3-.4 6-1.5 6-6 0-1.4-.5-2.5-1.4-3.4.1-.5.6-2-.1-3.6 0 0-1.3-.4-3.7 1.4a13 13 0 0 0-7.6 0C5.8 1.6 4.5 2 4.5 2c-.7 1.6-.2 3.1-.1 3.6C3.5 6.5 3 7.6 3 9c0 4.5 3 5.6 6 6-.6.3-1 1-1 2"/></svg>
+            GitHub
+          </a></li>
+          <li><span class="unavailable" aria-disabled="true" title="LinkedIn profile will be added later">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m5 0v-7m0 3a2.5 2.5 0 0 1 5 0v4"/><circle cx="7" cy="7" r=".7" fill="currentColor" stroke="none"/></svg>
+            LinkedIn
+          </span></li>
+        </ul>
+
+        <nav class="section-nav" aria-label="On this page">
+          <a href="#about" aria-current="location">About</a>
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#honors-and-awards">Honors and Awards</a>
+          <a href="#teaching">Teaching</a>
+        </nav>
+      </aside>
 
       <main id="main" tabindex="-1">
-        <p class="eyebrow" lang="en">Hello, welcome.</p>
-        <h1 lang="en">Eunchan Jo<span aria-hidden="true">.</span></h1>
-        <p class="intro">저의 이야기를 담을 공간을 준비하고 있습니다.</p>
-        <p class="status"><span class="status-dot" aria-hidden="true"></span>홈페이지 준비 중</p>
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
+          <div class="section-content"></div>
+        </section>
+        <section id="news" aria-labelledby="news-heading">
+          <h2 id="news-heading">News</h2>
+          <div class="section-content"></div>
+        </section>
+        <section id="publications" aria-labelledby="publications-heading">
+          <h2 id="publications-heading">Publications</h2>
+          <div class="section-content"></div>
+        </section>
+        <section id="education" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <div class="section-content"></div>
+        </section>
+        <section id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+          <div class="section-content"></div>
+        </section>
+        <section id="honors-and-awards" aria-labelledby="honors-heading">
+          <h2 id="honors-heading">Honors and Awards</h2>
+          <div class="section-content"></div>
+        </section>
+        <section id="teaching" aria-labelledby="teaching-heading">
+          <h2 id="teaching-heading">Teaching</h2>
+          <div class="section-content"></div>
+        </section>
+        <footer class="site-footer">Eunchan Jo</footer>
       </main>
-
-      <footer class="site-footer">
-        <span lang="en">Eunchan Jo</span>
-        <a href="https://github.com/Chipmunk-g4" lang="en">GitHub <span aria-hidden="true">↗</span></a>
-      </footer>
     </div>
   </body>
 </html>
