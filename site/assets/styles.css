@@ -151,6 +151,18 @@ h2 {
   letter-spacing: -0.55px;
 }
 .section-content { overflow-wrap: anywhere; }
+.record-list { list-style: none; margin: 0; padding: 0; }
+.record { display: grid; grid-template-columns: 152px minmax(0, 1fr); gap: 26px; padding-bottom: 30px; }
+.record:last-child { padding-bottom: 0; }
+.record-date { padding-top: 3px; color: var(--color-muted); font: 400 13px/1.7 var(--font-sans); }
+.record-body h3 { margin: 0 0 5px; font-size: 18px; line-height: 1.45; font-weight: 600; }
+.record-body p { margin: 0; }
+.record-role { font-size: 17px; font-style: italic; line-height: 1.6; }
+.record-meta { color: var(--color-muted); font-size: 15px; line-height: 1.65; }
+.record-description { font-size: 16px; line-height: 1.65; }
+.record-details { margin: 8px 0 0; padding-left: 18px; font-size: 16px; line-height: 1.65; }
+.record-details li + li { margin-top: 3px; }
+.award-distinction { color: var(--color-accent); }
 .section-nav-title {
   width: 100%;
   margin: 0 0 8px;
@@ -164,6 +176,7 @@ h2 {
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 210px minmax(0, 1fr); gap: 40px; }
+  .record { grid-template-columns: 1fr; gap: 5px; }
 }
 @media (max-width: 700px) {
   .header-inner, .layout { width: calc(100% - 40px); }
