@@ -140,7 +140,8 @@ h1 { margin: 0; font-size: 30px; font-weight: 600; line-height: 1.25; letter-spa
 .section-nav a[aria-current="location"]::after { transform: scaleX(1); }
 
 main { min-width: 0; }
-main section { min-height: 290px; padding-bottom: 44px; }
+main section { padding-bottom: 44px; }
+main section:has(.section-content:empty) { min-height: 290px; }
 main section:last-of-type { min-height: calc(100svh - var(--header-height) - 110px); }
 h2 {
   margin: 0 0 24px;
@@ -152,17 +153,17 @@ h2 {
 }
 .section-content { overflow-wrap: anywhere; }
 .record-list { list-style: none; margin: 0; padding: 0; }
-.record { display: grid; grid-template-columns: 152px minmax(0, 1fr); gap: 26px; padding-bottom: 30px; }
+.record { display: grid; grid-template-columns: 152px minmax(0, 1fr); gap: 26px; padding-bottom: 22px; }
 .record:last-child { padding-bottom: 0; }
 .record-date { padding-top: 3px; color: var(--color-muted); font: 400 13px/1.7 var(--font-sans); }
-.record-body h3 { margin: 0 0 5px; font-size: 18px; line-height: 1.45; font-weight: 600; }
+.record-body h3 { margin: 0 0 2px; font-size: 18px; line-height: 1.45; font-weight: 600; }
 .record-body p { margin: 0; }
-.record-role { font-size: 17px; font-style: italic; line-height: 1.6; }
+.record-role { font-size: 17px; line-height: 1.6; }
 .record-meta { color: var(--color-muted); font-size: 15px; line-height: 1.65; }
-.record-description { font-size: 16px; line-height: 1.65; }
-.record-details { margin: 8px 0 0; padding-left: 18px; font-size: 16px; line-height: 1.65; }
-.record-details li + li { margin-top: 3px; }
-.award-distinction { color: var(--color-accent); }
+#honors-and-awards .record { padding-bottom: 12px; }
+#honors-and-awards .record-body { font-size: 17px; line-height: 1.6; }
+.teaching-role { margin: 0 0 6px; font-size: 17px; }
+.teaching-list { margin: 0; padding-left: 21px; font-size: 17px; line-height: 1.6; }
 .section-nav-title {
   width: 100%;
   margin: 0 0 8px;
@@ -193,7 +194,7 @@ h2 {
   .social-links { display: flex; flex-wrap: wrap; gap: 2px 22px; margin: 22px 0; }
   .section-nav { flex-direction: row; flex-wrap: wrap; gap: 6px 22px; padding: 17px 0 22px; }
   main { margin-top: 26px; }
-  main section { min-height: 250px; }
+  main section:has(.section-content:empty) { min-height: 250px; }
   h2 { font-size: 23px; }
 }
 @media (max-width: 380px) {
