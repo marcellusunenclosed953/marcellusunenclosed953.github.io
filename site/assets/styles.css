@@ -61,6 +61,16 @@ button { font: inherit; }
 .header-links [aria-current="page"] { font-weight: 600; }
 .header-links button { padding: 10px 0; border: 0; background: none; text-align: left; }
 .header-links button:disabled { color: var(--color-muted); opacity: 1; cursor: default; }
+.cv-link { position: relative; }
+.cv-link small {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  color: var(--color-muted);
+  font-size: 10px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
 
 .layout {
   width: min(1140px, calc(100% - 64px));
